@@ -2,7 +2,7 @@
 .idea/
 venv/
 
-# Excluded dictionary files due to potential licensing conflicts
+# Excluded dictionary file due to potential licensing conflicts
 Dictionary.txt
 
 # Unique outputs that are uneeded for repository
