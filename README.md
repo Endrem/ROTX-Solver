@@ -33,4 +33,4 @@ plaintext_file_out = open("Plaintext.txt", "w")
 This program was created by [Cole Chapman](https://github.com/Endrem/).
 
 ## License
-ROTX-Solver is made available under the [MIT License](https://choosealicense.com/licenses/mit/)
+ROTX-Solver is made available under the [MIT License](https://choosealicense.com/licenses/mit/).
