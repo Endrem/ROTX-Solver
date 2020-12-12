@@ -19,13 +19,13 @@ def load_dictionary(dictionary_file):
                 get_distance(dictionary_word, dictionary_distance)
                 dictionary_word_array = [dictionary_word, dictionary_distance]
                 # dictionary_list appends dictionary words and their 'distances'.
-                # Example: [ [['the', [2,5,6]], ['and', [5,2,5]]] ]
+                # Example: [ [['the', [14,23]], ['and', [13,16]]] ]
                 dictionary_list[(len(dictionary_word) - 1)].append(dictionary_word_array)
     dictionary.close()
 
 
 # Calculates the unicode 'distance' between each letter and adds it to an array.
-# For example, the word "and" becomes [5,2,5].
+# For example, the word "and" becomes [13,16].  "A" to "N" distance is 13 while "N" to "D" distance is 16.
 def get_distance(word, array):
     for i in range(len(word) - 1):
         letter1 = ord(word[i].lower())
