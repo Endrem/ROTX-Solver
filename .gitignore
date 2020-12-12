@@ -1,0 +1,9 @@
+# Environment files
+.idea/
+venv/
+
+# Excluded dictionary files due to potential licensing conflicts
+Dictionary.txt
+
+# Unique outputs that are uneeded for repository
+Plaintext.txt
