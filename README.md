@@ -1,9 +1,10 @@
 [![License](https://img.shields.io/badge/license-MIT-green.svg)](https://choosealicense.com/licenses/mit/)
+![Rust](https://img.shields.io/badge/rust-v1.54.0-brown.svg)
 ![Python](https://img.shields.io/badge/python-v3.9-blue.svg)
 [![Donate](https://img.shields.io/badge/donate-PayPal-yellow.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=XH8R7VFJQE3YQ&currency_code=USD)
 
 # ROTX-Solver
-This program is a ROTX solver written in Python.
+This program is a ROTX solver written in Python.  There's also a Rust version as my first Rust project was to port this.  It's very fast.
 
 ## Description
 This ROTX solver takes a unique approach to solving for ROT by calculating the numerical 'distance' between each letter of both the dictionary set and the ciphered sentences. (Note: this ROTX solver only performs alphabetic rotations.)
@@ -20,14 +21,23 @@ The benefits of the much lowered number of comparisons greatly out-way the drawb
 
 ## Usage
 Change the following lines to reflect the file locations of each:
+
+#### Python
 ```
 load_dictionary("Dictionary.txt")
 cipher_file_in = open("ROTSentences.txt", "r")
 plaintext_file_out = open("Plaintext.txt", "w")
 ```
+#### Rust
+```
+load_dictionary(("../Dictionary.txt").to_string(), &mut dictionary_list);
+let cipher_file_in = File::open("../ROTSentences.txt").unwrap();
+let mut plaintext_file_out = File::create("Plaintext.txt").unwrap();
+```
 
 ## Roadmap
 - [ ] Add ability to change ROT alphabet (numbers & special characters).  Currently limited to A-Z.
+- [ ] Check for Rust performance enhancements using HashMap alternatives.
 
 ## Author
 The contents of this repository were created by [Cole Chapman](https://github.com/Endrem/).
