@@ -4,7 +4,7 @@
 [![Donate](https://img.shields.io/badge/donate-PayPal-yellow.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=XH8R7VFJQE3YQ&currency_code=USD)
 
 # ROTX-Solver
-This program is a ROTX solver written in Python.  There's also a Rust version as my first Rust project was to port this.  It's very fast.
+This program is a ROTX solver written in Python.  There's also a *Rust* port as my first Rust project.  It's very fast.
 
 ## Description
 This ROTX solver takes a unique approach to solving for ROT by calculating the numerical 'distance' between each letter of both the dictionary set and the ciphered sentences. (Note: this ROTX solver only performs alphabetic rotations.)
@@ -34,6 +34,13 @@ load_dictionary(("../Dictionary.txt").to_string(), &mut dictionary_list);
 let cipher_file_in = File::open("../ROTSentences.txt").unwrap();
 let mut plaintext_file_out = File::create("Plaintext.txt").unwrap();
 ```
+
+## Benchmark
+As a (rough) comparison, the Python script was profiled using cProfiler and completed in 4.893 seconds.  The Rust release was profiled using Windows Performance Recorder & Analyzer and it completed in 0.707 seconds.
+
+Notes:
+- These benchmarks were conducted on a Ryzen 5 2600.  Both scripts solved the same 1024 ROT-ciphered sentences (of varying length) correctly.
+- Refining the idea and optimizing the Python script reduced computation time, for the same ciphered sentences tested above, from 2 minutes down to under 5 seconds.  While I won't be able to make nearly the same *logistical* gains with Rust, it's still not optimized and I'm confident I can make it more efficient.
 
 ## Roadmap
 - [ ] Add ability to change ROT alphabet (numbers & special characters).  Currently limited to A-Z.
