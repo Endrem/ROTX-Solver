@@ -1,9 +1,12 @@
 # Environment files
-.idea/
-venv/
+ROTX-Solver-Python/.idea/
+ROTX-Solver-Python/venv/
+ROTX-Solver-Rust/target/
 
 # Excluded dictionary file due to potential licensing conflicts
 Dictionary.txt
 
 # Unique outputs that are uneeded for repository
 Plaintext.txt
+ROTX-Solver-Python/Plaintext.txt
+ROTX-Solver-Rust/Plaintext.txt

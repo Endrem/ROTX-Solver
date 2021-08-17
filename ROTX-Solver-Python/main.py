@@ -41,6 +41,7 @@ def get_distance(word, array):
 def test_sentence(rot_phrase):
     distance_phrase = []
     for rot_word in str.split(rot_phrase):
+        # Only grab alphabetic letters (to filter out punctuation).
         rot_word = ''.join([i for i in rot_word if i.isalpha()])
         new_phrase = []
         get_distance(rot_word, new_phrase)
@@ -79,8 +80,8 @@ def rot_decipher(text, rot):
 
 
 # Start of the main code.
-load_dictionary("Dictionary.txt")
-cipher_file_in = open("ROTSentences.txt", "r")
+load_dictionary("../Dictionary.txt")
+cipher_file_in = open("../ROTSentences.txt", "r")
 plaintext_file_out = open("Plaintext.txt", "w")
 
 # Checking each line/sentence in the ciphered file.
